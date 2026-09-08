@@ -1,0 +1,264 @@
+﻿css_content = """@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 8 12 20;
+    --foreground: 248 250 252;
+    --card: 17 24 39;
+    --card-foreground: 248 250 252;
+    --border: 255 255 255 / 0.08;
+    --primary: 56 189 248;
+    --primary-foreground: 15 23 42;
+  }
+
+  * {
+    border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #080C14;
+    color: #F8FAFC;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Accessible focus indicators */
+  :focus-visible {
+    outline: 2px solid #38BDF8;
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Custom subtle dark scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #080C14;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #1E293B;
+    border-radius: 4px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #334155;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-gradient-cyan {
+    background: linear-gradient(135deg, #FFFFFF 0%, #BAE6FD 60%, #38BDF8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #FEF3C7 0%, #F59E0B 70%, #D97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .glass-header {
+    background: rgba(8, 12, 20, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card {
+    background: rgba(17, 24, 39, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .glass-card:hover {
+    border-color: rgba(56, 189, 248, 0.3);
+  }
+  .puja-card {
+    background: rgba(24, 18, 12, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(245, 158, 11, 0.2);
+  }
+  .puja-card:hover {
+    border-color: rgba(245, 158, 11, 0.45);
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-4px);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  /* Authentic Bengali Dhaak Striking & Resonance Animations */
+  @keyframes authenticKathiRight {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(-45deg);
+    }
+    40% {
+      transform: rotate(18deg);
+    }
+    60% {
+      transform: rotate(-15deg);
+    }
+    80% {
+      transform: rotate(12deg);
+    }
+  }
+
+  @keyframes authenticKathiLeft {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    15% {
+      transform: rotate(15deg);
+    }
+    35% {
+      transform: rotate(-40deg);
+    }
+    55% {
+      transform: rotate(20deg);
+    }
+    75% {
+      transform: rotate(-25deg);
+    }
+    90% {
+      transform: rotate(10deg);
+    }
+  }
+
+  @keyframes impactFlashRight {
+    0%, 35%, 45%, 100% {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+    40% {
+      opacity: 1;
+      transform: scale(1.6);
+    }
+  }
+
+  @keyframes impactFlashLeft {
+    0%, 50%, 60%, 100% {
+      opacity: 0;
+      transform: scale(0.4);
+    }
+    55% {
+      opacity: 1;
+      transform: scale(1.6);
+    }
+  }
+
+  @keyframes authenticDhaakVibe {
+    0%, 100% {
+      transform: rotate(0deg) scale(1);
+    }
+    20% {
+      transform: rotate(-1.5deg) scale(1.03);
+    }
+    40% {
+      transform: rotate(1deg) scale(0.98);
+    }
+    60% {
+      transform: rotate(-1deg) scale(1.02);
+    }
+    80% {
+      transform: rotate(0.8deg) scale(0.99);
+    }
+  }
+
+  @keyframes featherSwayLush {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    30% {
+      transform: rotate(-12deg);
+    }
+    65% {
+      transform: rotate(8deg);
+    }
+  }
+
+  @keyframes soundRippleBig {
+    0% {
+      transform: scale(0.85);
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(2.5);
+      opacity: 0;
+    }
+  }
+
+  .animate-kathi-right-strike {
+    transform-origin: 130px 40px;
+    animation: authenticKathiRight 0.48s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .animate-kathi-left-strike {
+    transform-origin: 25px 40px;
+    animation: authenticKathiLeft 0.48s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .animate-impact-right {
+    transform-origin: 92px 75px;
+    animation: impactFlashRight 0.48s ease-out infinite;
+  }
+
+  .animate-impact-left {
+    transform-origin: 48px 82px;
+    animation: impactFlashLeft 0.48s ease-out infinite;
+  }
+
+  .animate-dhaak-body-vibe {
+    transform-origin: 75px 80px;
+    animation: authenticDhaakVibe 0.48s ease-in-out infinite;
+  }
+
+  .animate-feather-lush {
+    transform-origin: 85px 45px;
+    animation: featherSwayLush 0.48s ease-in-out infinite;
+  }
+
+  .animate-sound-ripple-big {
+    animation: soundRippleBig 0.96s cubic-bezier(0.1, 0.9, 0.2, 1) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+"""
+
+with open('src/app/globals.css', 'w', encoding='utf-8') as f:
+    f.write(css_content)
+
+print("Rewritten src/app/globals.css cleanly!")

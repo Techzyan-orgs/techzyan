@@ -1,0 +1,153 @@
+import { SolutionItem } from '@/types';
+
+export const solutionsData: SolutionItem[] = [
+  {
+    id: 'business-websites',
+    category: 'website',
+    title: 'High-Performance Business Websites',
+    subtitle: 'Fast, credible, and built to turn visitors into real client conversations.',
+    description: 'We design and craft websites with clean typography, purposeful whitespace, and crystal-clear value propositions that build immediate authority for your business.',
+    audience: ['Local Businesses', 'Specialist Consultants', 'Retail Stores', 'Creative Agencies', 'Service Providers'],
+    deliverables: ['Custom Web Design', 'Responsive Mobile Layout', 'Google Search & Local SEO Setup', 'Domain & Cloud Launch', '100% Code Ownership'],
+    keyFeatures: [
+      'Sub-second page loading on mobile networks',
+      'Direct WhatsApp & phone call consultation routing',
+      'Zero monthly page-builder subscription lock-in',
+      'Custom visual hierarchy tailored to your brand'
+    ],
+    timeline: '2 – 3 weeks',
+    pricingType: 'fixed-project',
+    iconName: 'Globe',
+    highlight: true,
+  },
+  {
+    id: 'healthcare-doctor-websites',
+    category: 'website',
+    title: 'Doctor & Clinic Practice Platforms',
+    subtitle: 'Authoritative, reassuring digital presence for healthcare practitioners.',
+    description: 'Designed specifically for doctors and clinics who need to present chamber timings, qualifications, and clinic locations clearly while eliminating phone call clutter.',
+    audience: ['Specialist Doctors', 'Polyclinics', 'Dentists', 'Therapists', 'Diagnostic Labs'],
+    deliverables: ['Clinic Profile Design', 'Chamber Timing Schedule', 'Google Maps Location Guide', 'Doctor Credentials Showcase'],
+    keyFeatures: [
+      'Multi-chamber OPD schedule with morning/evening indicators',
+      'Pre-appointment patient screening guidance',
+      'One-tap emergency call & WhatsApp routing',
+      'Accessible, high-contrast readable design for all age groups'
+    ],
+    timeline: '2 – 3 weeks',
+    pricingType: 'fixed-project',
+    iconName: 'Stethoscope',
+    highlight: true,
+  },
+  {
+    id: 'education-tutor-websites',
+    category: 'website',
+    title: 'Tutor & Educational Academy Portals',
+    subtitle: 'Organized course roadmaps, batch availability, and admission inquiry flows.',
+    description: 'Built for respected private tutors, coaching academies, and training institutes looking to showcase past student results and streamline batch enrollments.',
+    audience: ['Private Tutors', 'Coaching Academies', 'Test Prep Mentors', 'Music & Arts Schools', 'Training Centers'],
+    deliverables: ['Academic Portal Design', 'Batch Capacity Matrix', 'Syllabus Download Center', 'Direct Parent Inquiry Flow'],
+    keyFeatures: [
+      'Live batch vacancy indicator (e.g. "3 seats remaining")',
+      'Subject & board syllabus breakdown with past results',
+      'Structured parent inquiry generator pre-filling WhatsApp',
+      'Clear fee and schedule transparency'
+    ],
+    timeline: '2 – 3 weeks',
+    pricingType: 'fixed-project',
+    iconName: 'GraduationCap',
+  },
+  {
+    id: 'appointment-booking-systems',
+    category: 'custom-tool',
+    title: 'Smart Appointment & Scheduling Systems',
+    subtitle: 'Custom booking workflows tailored to your real chamber or practice hours.',
+    description: 'Unlike generic calendar plugins, we engineer lightweight booking workflows that respect your real chamber switches, patient limits, and triage requirements.',
+    audience: ['Doctors & Clinics', 'Bespoke Tailors', 'Legal Consultants', 'Therapists', 'Specialist Studios'],
+    deliverables: ['Patient Symptom Triage UX', 'Slot Booking Engine', 'WhatsApp & SMS Confirmation Webhook', 'Doctor Daily Schedule View'],
+    keyFeatures: [
+      'Multi-location chamber slot management',
+      'Patient requirement screening before booking',
+      'Instant WhatsApp booking confirmation notes',
+      'Zero monthly per-user SaaS license fees'
+    ],
+    timeline: '3 – 4 weeks',
+    pricingType: 'scope-based',
+    iconName: 'CalendarCheck',
+    highlight: true,
+  },
+  {
+    id: 'student-inquiry-management',
+    category: 'custom-tool',
+    title: 'Student Inquiry & Batch Management Tools',
+    subtitle: 'Eliminate lost leads and chaotic admission seasons with purpose-built tools.',
+    description: 'When an institute or tutor receives hundreds of inquiries, spreadsheets cause lost leads. We build clean inquiry triage tools your staff can use in 5 minutes.',
+    audience: ['Educational Institutes', 'Coaching Academies', 'Dance & Art Schools', 'Tutoring Networks'],
+    deliverables: ['Inquiry Triage Dashboard', 'Batch Allocation Engine', 'WhatsApp Notification Links', 'Data Export Tools'],
+    keyFeatures: [
+      'Automated inquiry capture from website & social links',
+      'Batch capacity status & waitlist tracking',
+      'One-click WhatsApp broadcast templates for batch announcements',
+      'Clutter-free, fast staff interface'
+    ],
+    timeline: '3 – 5 weeks',
+    pricingType: 'scope-based',
+    iconName: 'Users',
+  },
+  {
+    id: 'durga-puja-digital-hub',
+    category: 'puja-special',
+    title: 'Durga Puja Digital Hub & Sponsorship Suite',
+    subtitle: 'The premier digital solution for Kolkata & Bengal’s heritage Puja committees.',
+    description: 'We build digital homes for committees that celebrate pandal art, organize 5-day festival timetables, guide thousands of visitors, and present clear corporate sponsorship tiers.',
+    audience: ['Durga Puja Committees', 'Community Cultural Clubs', 'Sharodotsav Organizers', 'Heritage Trusts'],
+    deliverables: ['Festival Digital Hub', 'Corporate Sponsorship Proposal Module', '5-Day Interactive Timetable', 'Visitor Metro & Crowd Map'],
+    keyFeatures: [
+      '5-Day interactive ritual timetable (Pushpanjali, Sandhi Puja, Bhog)',
+      'Corporate sponsorship tier deck (Title, Co-Powered, Associate)',
+      'Visitor crowd guide with nearest Kolkata Metro stations & VIP gates',
+      'Theme concept & artist tribute gallery',
+      'Emergency helpline & volunteer WhatsApp hotline'
+    ],
+    timeline: '2 – 3 weeks',
+    pricingType: 'fixed-project',
+    iconName: 'Flame',
+    highlight: true,
+  },
+  {
+    id: 'bespoke-business-tools',
+    category: 'custom-tool',
+    title: 'Custom Quotation & Order Intake Calculators',
+    subtitle: 'Internal tools engineered around your specific operational bottleneck.',
+    description: 'Sometimes you don’t need an enterprise ERP. You just need a custom price estimator, an order intake form, or a digital measurement guide that works smoothly.',
+    audience: ['Manufacturing Workshops', 'Bespoke Tailors & Ateliers', 'B2B Suppliers', 'Local Distributors'],
+    deliverables: ['Custom Tool UX', 'Calculation Engine', 'Customer Intake Form', 'WhatsApp/Email Notification Routing'],
+    keyFeatures: [
+      'Bespoke price quotation & requirement calculator',
+      'Customer order & measurement intake workflows',
+      'Instant summary generation for client review',
+      'Direct synchronization with your existing workflow'
+    ],
+    timeline: '3 – 4 weeks',
+    pricingType: 'scope-based',
+    iconName: 'Cpu',
+  },
+  {
+    id: 'website-modernization-speed',
+    category: 'growth',
+    title: 'Website Modernization & Speed Optimization',
+    subtitle: 'Transform slow, outdated websites into sub-second, mobile-first platforms.',
+    description: 'If your existing website was built years ago on bloated page builders, we rebuild it with modern standards, sub-second mobile loading, and complete SEO foundations.',
+    audience: ['Existing Businesses', 'Clinics with Outdated Sites', 'Established Institutes'],
+    deliverables: ['Complete Code Overhaul', 'Mobile Performance Optimization', 'SEO Audit & Redirects', 'Cloud Migration'],
+    keyFeatures: [
+      'Sub-second mobile loading speed guarantee',
+      'Clean typography and modern visual hierarchy',
+      'Google Local Search and SEO structured markup',
+      '100% code ownership with zero lock-in'
+    ],
+    timeline: '1 – 2 weeks',
+    pricingType: 'fixed-project',
+    iconName: 'Zap',
+  }
+];
