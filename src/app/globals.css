@@ -244,6 +244,83 @@
   .animate-sound-ripple-big {
     animation: soundRippleBig 0.96s cubic-bezier(0.1, 0.9, 0.2, 1) infinite;
   }
+
+  /* Baruipur Bhattacharyapara Authentic Dhaak & Kathi Animations */
+  @keyframes dhaakRhythm {
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(1.4deg) scale(1.03) translateY(1px); }
+    50% { transform: rotate(0deg) scale(0.97); }
+    75% { transform: rotate(-1.2deg) scale(1.03) translateY(-1px); }
+    100% { transform: rotate(0deg) scale(1); }
+  }
+
+  @keyframes kathiStrikePrimary {
+    0% { transform: rotate(0deg); }
+    40% { transform: rotate(-34deg) translate(-6px, 10px); }
+    55% { transform: rotate(-38deg) translate(-8px, 12px); }
+    100% { transform: rotate(0deg); }
+  }
+
+  @keyframes kathiStrikeSecondary {
+    0% { transform: rotate(0deg); }
+    35% { transform: rotate(0deg); }
+    70% { transform: rotate(-30deg) translate(-5px, 8px); }
+    85% { transform: rotate(-36deg) translate(-7px, 11px); }
+    100% { transform: rotate(0deg); }
+  }
+
+  @keyframes soundRingPulse {
+    0% { transform: scale(0.6); opacity: 0.85; }
+    50% { opacity: 0.45; }
+    100% { transform: scale(1.9); opacity: 0; }
+  }
+
+  @keyframes noteFloatUp {
+    0% { transform: translateY(0) rotate(0deg) scale(0.5); opacity: 0; }
+    25% { opacity: 1; }
+    75% { opacity: 0.85; }
+    100% { transform: translateY(-55px) rotate(22deg) scale(1.15); opacity: 0; }
+  }
+
+  .animate-dhaak-beat {
+    animation: dhaakRhythm 0.36s infinite cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: 115px 70px;
+  }
+
+  .animate-kathi-primary {
+    animation: kathiStrikePrimary 0.36s infinite ease-in-out;
+    transform-origin: 218px 26px;
+  }
+
+  .animate-kathi-secondary {
+    animation: kathiStrikeSecondary 0.36s infinite ease-in-out;
+    transform-origin: 225px 42px;
+  }
+
+  .animate-sound-ring-1 {
+    animation: soundRingPulse 1.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1);
+    transform-origin: center;
+  }
+  .animate-sound-ring-2 {
+    animation: soundRingPulse 1.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1);
+    animation-delay: 0.4s;
+    transform-origin: center;
+  }
+  .animate-sound-ring-3 {
+    animation: soundRingPulse 1.2s infinite cubic-bezier(0.2, 0.8, 0.4, 1);
+    animation-delay: 0.8s;
+    transform-origin: center;
+  }
+
+  .animate-note-float-1 {
+    animation: noteFloatUp 2s infinite ease-out;
+  }
+  .animate-note-float-2 {
+    animation: noteFloatUp 2.3s infinite ease-out 0.6s;
+  }
+  .animate-note-float-3 {
+    animation: noteFloatUp 1.8s infinite ease-out 1.2s;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

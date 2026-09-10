@@ -106,13 +106,6 @@ export default function WorkPage() {
                     <p className="text-xs text-slate-400 leading-relaxed">
                       {project.summary}
                     </p>
-
-                    <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1">
-                      <div className="text-[10px] font-mono uppercase text-slate-500 font-semibold">Problem Solved:</div>
-                      <div className="text-xs text-slate-300 line-clamp-2">
-                        {project.problemSolved}
-                      </div>
-                    </div>
                   </div>
 
                   <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-2">
@@ -130,7 +123,7 @@ export default function WorkPage() {
                       rel="noopener noreferrer"
                       className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-brand-cyan text-xs font-bold transition-colors border border-sky-500/30"
                     >
-                      <span>Live Demo</span>
+                      <span>Visit Website</span>
                       <ExternalLink className="w-3.5 h-3.5" />
                     </a>
                   </div>

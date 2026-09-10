@@ -24,9 +24,9 @@ import {
   Flame,
   CalendarCheck,
   ExternalLink,
-  MessageCircle,
   Eye,
 } from 'lucide-react';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function HomePage() {
   const [isConsultationOpen, setIsConsultationOpen] = useState(false);
@@ -104,8 +104,8 @@ export default function HomePage() {
               </div>
 
               <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold text-slate-100 tracking-tight leading-[1.12] text-balance">
-                Websites engineered to work. <br className="hidden sm:inline" />
-                <span className="text-gradient-cyan">Not just to exist.</span>
+                Websites &amp; IT solutions <br className="hidden sm:inline" />
+                <span className="text-gradient-cyan">that work for your business.</span>
               </h1>
 
               <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed text-balance font-normal">
@@ -113,7 +113,7 @@ export default function HomePage() {
               </p>
 
               <div className="py-1 text-xs font-mono uppercase tracking-widest text-slate-400 font-medium">
-                Understand the requirement first • Build the right digital solution second
+                We understand your requirement first, then build the right digital solution.
               </div>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
@@ -557,12 +557,7 @@ export default function HomePage() {
                         {project.summary}
                       </p>
 
-                      <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1">
-                        <div className="text-[10px] font-mono uppercase text-slate-500 font-semibold">Problem Solved:</div>
-                        <div className="text-xs text-slate-300 line-clamp-2">
-                          {project.problemSolved}
-                        </div>
-                      </div>
+
                     </div>
 
                     <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-2">
@@ -580,7 +575,7 @@ export default function HomePage() {
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-brand-cyan text-xs font-bold transition-colors border border-sky-500/30"
                       >
-                        <span>Live Demo</span>
+                        <span>Visit Website</span>
                         <ExternalLink className="w-3.5 h-3.5" />
                       </a>
                     </div>
@@ -651,7 +646,7 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 font-bold text-xs uppercase tracking-wider rounded-xl transition-colors"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>Chat on WhatsApp</span>
               </a>
             </div>

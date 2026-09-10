@@ -1,8 +1,9 @@
-﻿'use client';
+'use client';
 
 import React, { useState } from 'react';
-import { Sparkles, ArrowRight, CheckCircle2, MessageCircle, ShieldCheck, Clock, Layers } from 'lucide-react';
+import { Sparkles, ArrowRight, CheckCircle2, ShieldCheck, Clock, Layers } from 'lucide-react';
 import { siteConfig } from '@/config/site';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function ProjectConsultationSection({ onOpenConsultation }: { onOpenConsultation: (category?: string) => void }) {
   const [selectedRole, setSelectedRole] = useState<'doctor' | 'tutor' | 'business' | 'institute' | 'puja'>('doctor');
@@ -192,7 +193,7 @@ export default function ProjectConsultationSection({ onOpenConsultation }: { onO
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold uppercase tracking-wider rounded-lg transition-colors"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>Discuss on WhatsApp</span>
               </a>
               <button

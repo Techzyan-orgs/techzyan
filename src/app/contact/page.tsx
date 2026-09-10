@@ -6,7 +6,6 @@ import Footer from '@/components/Footer';
 import { siteConfig } from '@/config/site';
 import {
   Mail,
-  MessageCircle,
   Phone,
   Clock,
   MapPin,
@@ -16,6 +15,7 @@ import {
   ShieldCheck,
   ArrowRight,
 } from 'lucide-react';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -74,7 +74,7 @@ export default function ContactPage() {
               >
                 <div className="flex items-center justify-between">
                   <span className="text-xs font-mono uppercase text-emerald-400 font-semibold flex items-center gap-2">
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4" />
                     <span>Instant Direct Chat</span>
                   </span>
                   <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
@@ -214,7 +214,7 @@ export default function ContactPage() {
                       </label>
                       <div className="grid grid-cols-3 gap-2.5">
                         {[
-                          { id: 'WhatsApp', label: 'WhatsApp', icon: MessageCircle },
+                          { id: 'WhatsApp', label: 'WhatsApp', icon: WhatsAppIcon },
                           { id: 'Email', label: 'Email', icon: Mail },
                           { id: 'Phone', label: 'Phone Call', icon: Phone },
                         ].map((method) => {

@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { X, Sparkles, Flame, CheckCircle2, MessageCircle, Mail, Phone, ArrowRight, MapPin, Award } from 'lucide-react';
+import { X, Sparkles, Flame, CheckCircle2, Mail, Phone, ArrowRight, MapPin, Award } from 'lucide-react';
 import { siteConfig } from '@/config/site';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 interface PujaConsultationModalProps {
   isOpen: boolean;
@@ -236,7 +237,7 @@ export default function PujaConsultationModal({ isOpen, onClose }: PujaConsultat
                 </label>
                 <div className="grid grid-cols-3 gap-2.5">
                   {[
-                    { id: 'WhatsApp', label: 'WhatsApp', icon: MessageCircle },
+                    { id: 'WhatsApp', label: 'WhatsApp', icon: WhatsAppIcon },
                     { id: 'Phone', label: 'Phone Call', icon: Phone },
                     { id: 'Email', label: 'Email', icon: Mail },
                   ].map((method) => {

@@ -1,4 +1,8 @@
-'use client';
+﻿import os
+
+dhaak_tsx_path = r"c:\Users\Samudra Ganguly\Antigravity\Website_005\techzyan\src\components\DhaakButton.tsx"
+
+dhaak_code = """'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
 
@@ -295,3 +299,9 @@ export default function DhaakButton({ className = '' }: DhaakButtonProps) {
     </div>
   );
 }
+"""
+
+with open(dhaak_tsx_path, "w", encoding="utf-8") as f:
+    f.write(dhaak_code)
+
+print("Updated DhaakButton.tsx successfully!")

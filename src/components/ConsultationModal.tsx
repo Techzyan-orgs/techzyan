@@ -1,8 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { X, MessageCircle, Mail, Phone, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
+import { X, Mail, Phone, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react';
 import { siteConfig } from '@/config/site';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 interface ConsultationModalProps {
   isOpen: boolean;
@@ -182,7 +183,7 @@ export default function ConsultationModal({ isOpen, onClose, initialCategory }: 
                 </label>
                 <div className="grid grid-cols-3 gap-2.5">
                   {[
-                    { id: 'WhatsApp', icon: MessageCircle, label: 'WhatsApp' },
+                    { id: 'WhatsApp', icon: WhatsAppIcon, label: 'WhatsApp' },
                     { id: 'Email', icon: Mail, label: 'Email' },
                     { id: 'Phone', icon: Phone, label: 'Phone Call' },
                   ].map((method) => {

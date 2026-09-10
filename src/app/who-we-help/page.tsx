@@ -19,7 +19,6 @@ import {
   Sparkles,
   Layers,
   ShieldCheck,
-  MessageCircle,
 } from 'lucide-react';
 
 export default function WhoWeHelpPage() {

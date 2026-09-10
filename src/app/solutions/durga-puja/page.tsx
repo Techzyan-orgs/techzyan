@@ -20,8 +20,8 @@ import {
   Sparkles,
   ArrowRight,
   CheckCircle2,
-  MessageCircle,
 } from 'lucide-react';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function DurgaPujaPage() {
   const [isPujaModalOpen, setIsPujaModalOpen] = useState(false);
@@ -142,7 +142,7 @@ export default function DurgaPujaPage() {
                   rel="noopener noreferrer"
                   className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-amber-500/30 font-semibold text-xs uppercase tracking-wider rounded-xl transition-colors backdrop-blur-sm"
                 >
-                  <MessageCircle className="w-4 h-4 text-emerald-400" />
+                  <WhatsAppIcon className="w-4 h-4 text-emerald-400" />
                   <span>WhatsApp Committee Lead</span>
                 </a>
               </div>

@@ -1,4 +1,10 @@
-import { DemonstrationProject } from '@/types';
+﻿import os
+
+root_dir = r"c:\Users\Samudra Ganguly\Antigravity\Website_005\techzyan"
+
+# 1. Update src/config/site.ts
+site_config_path = os.path.join(root_dir, "src", "config", "site.ts")
+site_config_content = """import { DemonstrationProject } from '@/types';
 
 /**
  * =========================================================================
@@ -8,19 +14,19 @@ import { DemonstrationProject } from '@/types';
  * (display texts, tel links, WhatsApp links, and forms) updates automatically!
  */
 const COUNTRY_CODE = "+91";
-const PHONE_NUMBER = "7439303013";
+const PHONE_NUMBER = "8100507200";
 const PRIMARY_EMAIL = "contact@techzyan.org";
 const SITE_DOMAIN = "https://techzyan.org";
 
 // Derived phone strings (computed automatically)
-const PHONE_CLEAN = `${COUNTRY_CODE.replace('+', '')}${PHONE_NUMBER}`; // "917439303013"
-const PHONE_RAW = `${COUNTRY_CODE}${PHONE_NUMBER}`; // "+917439303013"
-const PHONE_DISPLAY = `${COUNTRY_CODE}-${PHONE_NUMBER}`; // "+91-7439303013"
+const PHONE_CLEAN = `${COUNTRY_CODE.replace('+', '')}${PHONE_NUMBER}`; // "918100507200"
+const PHONE_RAW = `${COUNTRY_CODE}${PHONE_NUMBER}`; // "+918100507200"
+const PHONE_DISPLAY = `${COUNTRY_CODE} ${PHONE_NUMBER.slice(0, 5)} ${PHONE_NUMBER.slice(5)}`; // "+91 81005 07200"
 
 export const siteConfig = {
   name: "Techzyan",
   legalName: "Techzyan Technical Studio",
-  tagline: "Websites & IT solutions that work for your business.",
+  tagline: "Understand first. Build the right digital solution second.",
   description: "Techzyan is a premium specialist technical studio based in Kolkata, India. We partner with businesses, healthcare professionals, educators, and cultural organizations to build high-performance websites and bespoke digital solutions.",
   url: SITE_DOMAIN,
   ogImage: `${SITE_DOMAIN}/og-image.jpg`,
@@ -148,14 +154,14 @@ export const siteConfig = {
     },
     {
       id: 'subhashish-banerjee-tutor',
-      title: 'Prof. Subhashish Banerjee — Physics & Mathematics Tutor',
+      title: 'Prof. Subhashish Banerjee — Physics & Mathematics Mentorship',
       shortTitle: 'Senior Academic Mentor & Board Guidance',
       category: 'Education & Independent Mentorship',
       clientType: 'Senior Educator / Academic Mentor',
       badge: 'Demo',
       demoUrl: 'https://demo-tutor-subhashish-banerjee.vercel.app',
       hasLiveSite: true,
-      thumbnailImage: '/images/subhashish-tutor.jpg',
+      thumbnailImage: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&w=800&q=80',
       summary: '16+ years of dedicated academic mentorship for ICSE, ISC, and CBSE students (Classes 9–12) with small 8-student batches and diagnostic feedback.',
       problemSolved: 'Managing student inquiries across Class 9–12 ICSE, ISC, and CBSE boards was causing lost WhatsApp messages and confusion regarding batch capacity.',
       engineeredSolution: 'Engineered an academic portal featuring curriculum roadmaps, small batch vacancy indicators, and parent diagnostic feedback tracking.',
@@ -188,9 +194,9 @@ export const siteConfig = {
       category: 'Retail & Custom Ladies Tailoring',
       clientType: 'Ladies Tailor / Custom Atelier',
       badge: 'Demo',
-      demoUrl: 'https://demo-xyz-ladies-tailor.vercel.app',
+      demoUrl: 'https://demo-boutique.techzyan.org',
       hasLiveSite: true,
-      thumbnailImage: '/images/ladies_tailor.jpg',
+      thumbnailImage: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=800&q=80',
       summary: 'An editorial digital lookbook with visual measurement guide and private consultation booking for bespoke ladies tailoring.',
       problemSolved: 'A well-established ladies tailoring atelier wanted to reach modern clients across Kolkata with digital lookbooks, neckline/sleeve designs, and fitting appointments.',
       engineeredSolution: 'Designed an elegant digital boutique featuring fabric lookbooks, illustrated measurement walkthroughs, custom blouse/kurti pattern previews, and a private fitting booking system.',
@@ -260,7 +266,7 @@ export const siteConfig = {
       badge: 'Live Website',
       demoUrl: 'https://baruipurbhattacharyaparapujo.info',
       hasLiveSite: true,
-      thumbnailImage: '/images/baruipur-durga-puja.jpg',
+      thumbnailImage: 'https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=800&q=80',
       summary: 'Official digital platform for the 50th Golden Jubilee celebration featuring theme ‘Anubhuti’ (অনুভূতি), sponsorship packages, and route guide for 150,000+ visitors.',
       problemSolved: 'The committee needed a dignified digital medium to present corporate sponsorship packages and assist 150,000+ festival visitors with live pandal routes.',
       engineeredSolution: 'Constructed a festival portal featuring the theme art tribute, sponsorship packages deck, 5-day puja timings, and transit navigation for Baruipur.',
@@ -288,3 +294,52 @@ export const siteConfig = {
     }
   ] as DemonstrationProject[],
 };
+"""
+
+with open(site_config_path, 'w', encoding='utf-8') as f:
+    f.write(site_config_content)
+print("Updated site.ts successfully!")
+
+# 2. Update src/app/page.tsx
+page_path = os.path.join(root_dir, "src", "app", "page.tsx")
+with open(page_path, 'r', encoding='utf-8') as f:
+    page_content = f.read()
+
+# Remove problem solved box
+problem_solved_block = """                      <div className="p-3 rounded-xl bg-slate-950/60 border border-slate-800 space-y-1">
+                        <div className="text-[10px] font-mono uppercase text-slate-500 font-semibold">Problem Solved:</div>
+                        <div className="text-xs text-slate-300 line-clamp-2">
+                          {project.problemSolved}
+                        </div>
+                      </div>"""
+
+page_content = page_content.replace(problem_solved_block, "")
+# Replace "Live Demo" with "Visit Website"
+page_content = page_content.replace("<span>Live Demo</span>", "<span>Visit Website</span>")
+
+with open(page_path, 'w', encoding='utf-8') as f:
+    f.write(page_content)
+print("Updated page.tsx successfully!")
+
+# 3. Update src/app/work/page.tsx
+work_path = os.path.join(root_dir, "src", "app", "work", "page.tsx")
+with open(work_path, 'r', encoding='utf-8') as f:
+    work_content = f.read()
+
+work_content = work_content.replace(problem_solved_block, "")
+work_content = work_content.replace("<span>Live Demo</span>", "<span>Visit Website</span>")
+
+with open(work_path, 'w', encoding='utf-8') as f:
+    f.write(work_content)
+print("Updated work/page.tsx successfully!")
+
+# 4. Update src/components/DemonstrationModal.tsx
+modal_path = os.path.join(root_dir, "src", "components", "DemonstrationModal.tsx")
+with open(modal_path, 'r', encoding='utf-8') as f:
+    modal_content = f.read()
+
+modal_content = modal_content.replace("<span>Live Demo</span>", "<span>Visit Website</span>")
+
+with open(modal_path, 'w', encoding='utf-8') as f:
+    f.write(modal_content)
+print("Updated DemonstrationModal.tsx successfully!")

@@ -24,16 +24,8 @@ export default function Header({ onOpenConsultation }: { onOpenConsultation?: ()
   }, [pathname]);
 
   return (
-    <>
-      <a
-        href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-brand-cyan text-slate-900 font-semibold rounded-md shadow-lg"
-      >
-        Skip to main content
-      </a>
-
-      <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
+    <header
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
           scrolled ? 'glass-header shadow-lg shadow-black/40 py-3.5' : 'bg-transparent py-5'
         }`}
       >
@@ -150,6 +142,5 @@ export default function Header({ onOpenConsultation }: { onOpenConsultation?: ()
           </div>
         )}
       </header>
-    </>
   );
 }

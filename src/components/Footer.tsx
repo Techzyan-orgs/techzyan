@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
-import { Sparkles, ArrowUpRight, MessageCircle, Mail, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
+import { Sparkles, ArrowUpRight, Mail, Phone, MapPin, Clock, ShieldCheck } from 'lucide-react';
+import WhatsAppIcon from '@/components/WhatsAppIcon';
 
 export default function Footer() {
   return (
@@ -44,7 +45,7 @@ export default function Footer() {
                 <span>Our Core Operating Principle</span>
               </div>
               <p className="text-xs text-slate-300 leading-relaxed">
-                “Understand the requirement first. Build the right digital solution second.” Zero fake metrics, zero bloated templates.
+                “We understand your requirement first, then build the right digital solution.” Zero fake metrics, zero bloated templates.
               </p>
             </div>
           </div>
@@ -147,7 +148,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 hover:text-emerald-400 transition-colors"
                 >
-                  <MessageCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <WhatsAppIcon className="w-4 h-4 text-emerald-400 shrink-0" />
                   <span>WhatsApp Consultation</span>
                   <ArrowUpRight className="w-3 h-3 text-slate-500" />
                 </a>

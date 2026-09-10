@@ -85,7 +85,7 @@ export default function DemonstrationModal({ project, onClose, onOpenConsultatio
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-brand-cyan hover:bg-sky-300 text-slate-950 text-xs font-bold uppercase tracking-wider rounded-xl shadow-glow-cyan transition-all"
               >
-                <span>Live Demo</span>
+                <span>Visit Website</span>
                 <ExternalLink className="w-3.5 h-3.5" />
               </a>
             </div>

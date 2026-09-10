@@ -51,7 +51,7 @@ export default function AboutPage() {
                 <Compass className="w-5 h-5" />
               </div>
               <h2 className="text-xl font-bold text-slate-100">
-                1. Understand the Requirement First
+                1. Understand the Requirement First, Then Build the Right Digital Solution
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                 Before writing a single line of code or recommending a framework, we dissect how your practice, coaching batch, or business operations flow. We will never sell you an expensive custom application if a crisp, high-speed website is all you need.
