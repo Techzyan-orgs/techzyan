@@ -1,4 +1,4 @@
-﻿import { AudienceItem } from '@/types';
+import { AudienceItem } from '@/types';
 
 export const audienceData: AudienceItem[] = [
   {
@@ -43,7 +43,7 @@ export const audienceData: AudienceItem[] = [
   },
   {
     id: 'local-businesses',
-    title: 'Small Businesses & Boutiques',
+    title: 'Growing Businesses',
     roleSubtitle: 'Heritage Shops, Custom Ateliers, Service Agencies & Retailers',
     context: 'Local businesses provide exceptional craft, personal care, and specialized services, yet their online presence often fails to convey the quality of their work.',
     commonFriction: [

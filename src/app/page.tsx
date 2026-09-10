@@ -64,13 +64,13 @@ export default function HomePage() {
       category: 'Private Tutor & Educator'
     },
     business: {
-      role: 'Small Businesses & Boutiques',
+      role: 'Growing Businesses',
       entry: 'Editorial Showcase & Brand Presence',
       entryDesc: 'Sub-second mobile speed with high-resolution lookbooks that build immediate credibility.',
       custom: 'Custom Price Estimator & Measurement Guide',
       customDesc: 'Pre-qualify customer inquiries and collect bespoke orders without manual friction.',
       impact: 'Turn passive web visitors into high-intent paying customers.',
-      category: 'Small Business & Boutique'
+      category: 'Growing Business'
     },
     puja: {
       role: 'Durga Puja & Cultural Committees',
@@ -323,7 +323,7 @@ export default function HomePage() {
               {[
                 { id: 'doctor', label: 'Doctor / Clinic', icon: Stethoscope },
                 { id: 'tutor', label: 'Private Tutor', icon: GraduationCap },
-                { id: 'business', label: 'Small Business / Shop', icon: Briefcase },
+                { id: 'business', label: 'Growing Business', icon: Briefcase },
                 { id: 'puja', label: 'Durga Puja Committee', icon: Flame },
               ].map((tab) => {
                 const Icon = tab.icon;

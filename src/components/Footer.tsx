@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/who-we-help#local-businesses" className="hover:text-brand-cyan transition-colors">
-                  Small Businesses & Boutiques
+                  Growing Businesses
                 </Link>
               </li>
               <li>

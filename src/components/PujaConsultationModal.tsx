@@ -265,10 +265,14 @@ export default function PujaConsultationModal({ isOpen, onClose }: PujaConsultat
               {/* Contact Value */}
               <div>
                 <label className="block text-xs font-mono uppercase text-amber-300/80 mb-1.5 font-medium">
-                  Your {formData.contactMethod} Number or Address *
+                  {formData.contactMethod === 'Email'
+                    ? 'Your Email ID *'
+                    : formData.contactMethod === 'WhatsApp'
+                    ? 'Your WhatsApp Number *'
+                    : 'Your Phone Number *'}
                 </label>
                 <input
-                  type="text"
+                  type={formData.contactMethod === 'Email' ? 'email' : 'tel'}
                   required
                   value={formData.contactValue}
                   onChange={(e) => setFormData({ ...formData, contactValue: e.target.value })}

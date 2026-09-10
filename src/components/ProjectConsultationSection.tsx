@@ -30,14 +30,14 @@ export default function ProjectConsultationSection({ onOpenConsultation }: { onO
       category: 'Private Tutor & Educator',
     },
     business: {
-      label: 'Small Business / Boutique',
+      label: 'Growing Business',
       title: 'High-Converting Brand Website & Order Pipeline',
       tagline: 'Distinctive visual craft, sub-second mobile speed, and structured quotation requests.',
       entryDeliverable: 'Custom lookbook / service showcase with modern responsive layout.',
       customTech: 'Bespoke price estimation tool or custom measurement consultation guide.',
       timeline: '12 – 18 business days',
       investment: 'Transparent fixed project quote',
-      category: 'Small Business & Boutique',
+      category: 'Growing Business',
     },
     institute: {
       label: 'Educational Institute',

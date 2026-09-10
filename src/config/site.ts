@@ -85,7 +85,7 @@ export const siteConfig = {
     whoWeHelp: [
       { label: "Doctors & Healthcare", href: "/who-we-help#doctors-healthcare" },
       { label: "Private Tutors & Mentors", href: "/who-we-help#tutors-educators" },
-      { label: "Small Businesses & Boutiques", href: "/who-we-help#local-businesses" },
+      { label: "Growing Businesses", href: "/who-we-help#local-businesses" },
       { label: "Educational Institutes", href: "/who-we-help#educational-institutes" },
       { label: "Durga Puja Committees", href: "/who-we-help#durga-puja-committees" },
       { label: "Demonstration Portfolio", href: "/work" },

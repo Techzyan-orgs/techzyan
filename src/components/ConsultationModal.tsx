@@ -15,7 +15,7 @@ export default function ConsultationModal({ isOpen, onClose, initialCategory }: 
   const [formData, setFormData] = useState({
     name: '',
     organization: '',
-    category: initialCategory || 'Small Business',
+    category: initialCategory || 'Growing Business',
     solutionType: 'Website & Digital Presence',
     contactMethod: 'WhatsApp',
     contactValue: '',
@@ -152,7 +152,7 @@ export default function ConsultationModal({ isOpen, onClose, initialCategory }: 
                   >
                     <option value="Doctor & Healthcare">Doctor & Healthcare</option>
                     <option value="Private Tutor & Educator">Private Tutor & Educator</option>
-                    <option value="Small Business & Boutique">Small Business & Boutique</option>
+                    <option value="Growing Business">Growing Business</option>
                     <option value="Educational Institute">Educational Institute</option>
                     <option value="Durga Puja Committee">Durga Puja Committee</option>
                     <option value="Other Specialist">Other Specialist</option>
@@ -210,10 +210,14 @@ export default function ConsultationModal({ isOpen, onClose, initialCategory }: 
 
               <div>
                 <label className="block text-xs font-mono uppercase text-slate-400 mb-1.5 font-medium">
-                  Your {formData.contactMethod} Number or Address *
+                  {formData.contactMethod === 'Email'
+                    ? 'Your Email ID *'
+                    : formData.contactMethod === 'WhatsApp'
+                    ? 'Your WhatsApp Number *'
+                    : 'Your Phone Number *'}
                 </label>
                 <input
-                  type="text"
+                  type={formData.contactMethod === 'Email' ? 'email' : 'tel'}
                   required
                   value={formData.contactValue}
                   onChange={(e) => setFormData({ ...formData, contactValue: e.target.value })}
