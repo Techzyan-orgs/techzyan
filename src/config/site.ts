@@ -217,6 +217,111 @@ export const siteConfig = {
       }
     },
     {
+      id: 'stoic-mens-salon',
+      title: "Stoic Men's Salon — Fine Barbering & Luxury Grooming",
+      shortTitle: "Fine Barbering & Grooming Atelier",
+      category: 'Personal Care & Luxury Grooming',
+      clientType: "Men's Luxury Salon / Barber Atelier",
+      badge: 'Demo',
+      demoUrl: 'https://demo-mens-salon.vercel.app',
+      hasLiveSite: true,
+      thumbnailImage: '/images/stoic-mens-salon.jpg',
+      summary: 'A private luxury gentlemen’s grooming lounge on Ballygunge Circular Road featuring master Japanese scissor work, classic hot-towel shaves, and private acoustic suites.',
+      problemSolved: 'High-end grooming studios struggle with client walk-in crowding, lost WhatsApp bookings, and communicating their private suite hygiene standards.',
+      engineeredSolution: 'Engineered an opulent, dark-mode barbering portal featuring transparent service menus, private acoustic suite walkthroughs, and direct WhatsApp appointment routing.',
+      keyFeatures: [
+        'Private Soundproof Acoustic Grooming Suites in Ballygunge',
+        'Master Japanese Scissor Work & Traditional Hot-Towel Shaving Menu',
+        'Transparent Service Tariff with Real-Time Duration Estimates',
+        '100% Hospital-Grade Autoclaved Instrument Hygiene Guarantee',
+        'Direct WhatsApp & Instant Appointment Scheduling Pipeline'
+      ],
+      mockData: {
+        heroHeadline: "Kolkata's Premier Private Luxury Men's Salon",
+        heroSubheadline: 'Private acoustic suites at Ballygunge Circular Road, Kolkata.',
+        metrics: [
+          { label: 'Suite Silence', value: 'Double-Glazed Acoustic' },
+          { label: 'Hygiene Standard', value: '100% Autoclaved' },
+          { label: 'Master Craft', value: 'Japanese Scissor Work' }
+        ],
+        uiHighlights: [
+          'Private Acoustic Suite Gallery',
+          'Interactive Service & Treatment Menu',
+          'Direct WhatsApp Appointment Webhook'
+        ]
+      }
+    },
+    {
+      id: 'roop-katha-salon',
+      title: 'Roop Katha — Luxury Beauty Salon & Bridal Studio',
+      shortTitle: 'Luxury Bridal Studio & Beauty Atelier',
+      category: 'Bridal Artistry & Luxury Salon',
+      clientType: 'Luxury Beauty Salon / Bridal Studio',
+      badge: 'Demo',
+      demoUrl: 'https://demo-beauty-parlour-sage.vercel.app',
+      hasLiveSite: true,
+      thumbnailImage: '/images/roop-katha-salon.jpg',
+      summary: 'An opulent Bengali luxury salon and bridal studio on Ballygunge Circular Road combining century-old Bengal botanical rituals, handcrafted Chandan art, and French skincare science.',
+      problemSolved: 'Bridal makeup studios face massive phone fatigue handling package queries, pricing disputes, and lack of visual transparency for high-ticket wedding looks.',
+      engineeredSolution: 'Constructed a sensory luxury bridal platform featuring 3 signature mood editions (Rajbari Heritage, L’Aura Parisienne, Bengal Nocturne), interactive custom package estimators, and private suite tours.',
+      keyFeatures: [
+        'Signature Mood Edition Lookbooks: Rajbari Heritage, L’Aura & Bengal Nocturne',
+        'Freehand Chandan Brow Artistry & 24-Hr Humidity-Lock Airbrush Canvas',
+        'Interactive Custom Package Duration & Tariff Estimator',
+        'The Ballygunge Estate Private Soundproof Bridal Suites',
+        'Hospital-Grade Sterile Cassettes & Bengal Botanical Distillates'
+      ],
+      mockData: {
+        heroHeadline: 'Where Century-Old Bengal Botanical Traditions Meet Haute Skincare',
+        heroSubheadline: 'Bespoke bridal styling & luxury beauty rituals at Ballygunge, Kolkata.',
+        metrics: [
+          { label: 'Bridal Transformation', value: '300-Min Ritual' },
+          { label: 'Botanical Grade', value: 'Certified Organic' },
+          { label: 'Vanity Lighting', value: 'Calibrated 5000K' }
+        ],
+        uiHighlights: [
+          'Signature Mood Lookbook Switcher',
+          'Custom Package Price Calculator',
+          'Ballygunge Estate Suite Showcase'
+        ]
+      }
+    },
+    {
+      id: 'titan-athletic-club',
+      title: 'Titan Athletic Club — Premium Gym & Performance Center',
+      shortTitle: 'Performance Arena & Multi-Branch Fitness',
+      category: 'Fitness & Athletic Centers',
+      clientType: 'Premium Gym & Performance Club',
+      badge: 'Demo',
+      demoUrl: 'https://titan-gym-demo-ashy.vercel.app',
+      hasLiveSite: true,
+      thumbnailImage: '/images/titan-athletic-club.jpg',
+      summary: 'Metropolis flagship arena featuring Olympic barbell platforms, official Hyrox tracks, Zumba dance parties, contrast recovery spas, and unified multi-branch access.',
+      problemSolved: 'Multi-location fitness clubs lose prospective members due to fragmented membership cards, confusing program tiers, and static facility tours.',
+      engineeredSolution: 'Engineered a high-energy, cinematic fitness hub featuring interactive before/after transformation comparison sliders, tiered membership calculators, and multi-arena program directories.',
+      keyFeatures: [
+        'Olympic Barbell Lifting Platforms (Eleiko/Rogue) & Official Hyrox Track',
+        'Interactive Before & After Member Transformation Comparison Sliders',
+        'Single Unified Subscription Pass across 4 Regional Arenas',
+        'Contrast Therapy Spas with Cold Plunge & Finnish Infrared Saunas',
+        'Zumba Dance Fitness & Metabolic HIIT Conditioning Schedules'
+      ],
+      mockData: {
+        heroHeadline: 'Where Relentless Iron Meets Unstoppable Humans',
+        heroSubheadline: 'Metropolis flagship athletic arenas, Hyrox tracks & contrast recovery spas.',
+        metrics: [
+          { label: 'Heritage', value: '14+ Years' },
+          { label: 'Active Athletes', value: '25,000+' },
+          { label: 'Arenas', value: '4 Regional Clubs' }
+        ],
+        uiHighlights: [
+          'Interactive Transformation Sliders',
+          'Tiered Membership Architecture',
+          'Multi-Branch Arena Explorer'
+        ]
+      }
+    },
+    {
       id: 'philomath-computer-classes',
       title: 'Philomath Computer Classes',
       shortTitle: 'ICSE, ISC & CBSE Computer Science Portal',

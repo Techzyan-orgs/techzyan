@@ -53,7 +53,9 @@ export default function WorkPage() {
               { id: 'all', label: 'All Demonstration Projects' },
               { id: 'healthcare', label: 'Healthcare & Clinic' },
               { id: 'education', label: 'Tutors & Academies' },
-              { id: 'retail', label: 'Boutiques & Shops' },
+              { id: 'retail', label: 'Boutiques & Tailoring' },
+              { id: 'salon', label: 'Salons & Personal Care' },
+              { id: 'fitness', label: 'Fitness & Athletic' },
               { id: 'cultural', label: 'Durga Puja & Cultural' },
             ].map((tab) => (
               <button
