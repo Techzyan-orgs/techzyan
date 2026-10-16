@@ -14,6 +14,8 @@ import {
   CheckCircle2,
   ShieldCheck,
   ArrowRight,
+  Loader2,
+  AlertCircle,
 } from 'lucide-react';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 
@@ -28,14 +30,41 @@ export default function ContactPage() {
   });
 
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (formData.contactMethod === 'WhatsApp') {
-      const text = `Hi Techzyan! My name is ${formData.name || 'a visitor'} from ${formData.organization || 'my organization'}. Category: ${formData.category}. Note: ${formData.requirementNote || 'Would love to discuss details.'}`;
-      window.open(siteConfig.helpers.getWhatsAppUrl(text), '_blank');
+    setIsSubmitting(true);
+    setSubmitError(null);
+
+    try {
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'contact-page',
+          ...formData,
+        }),
+      });
+
+      if (!res.ok) {
+        const errorData = await res.json().catch(() => ({}));
+        throw new Error(errorData.error || 'Failed to submit inquiry. Please try again or reach out on WhatsApp.');
+      }
+
+      if (formData.contactMethod === 'WhatsApp') {
+        const text = `Hi Techzyan! My name is ${formData.name || 'a visitor'} from ${formData.organization || 'my organization'}. Category: ${formData.category}. Note: ${formData.requirementNote || 'Would love to discuss details.'}`;
+        window.open(siteConfig.helpers.getWhatsAppUrl(text), '_blank');
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      console.error('Contact submission error:', err);
+      setSubmitError(err.message || 'Something went wrong while sending your request. Please try again.');
+    } finally {
+      setIsSubmitting(false);
     }
-    setSubmitted(true);
   };
 
   return (
@@ -276,17 +305,37 @@ export default function ContactPage() {
                       />
                     </div>
 
+                    {submitError && (
+                      <div className="p-3.5 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-300 text-xs flex items-start gap-2.5">
+                        <AlertCircle className="w-4 h-4 text-rose-400 shrink-0 mt-0.5" />
+                        <div>
+                          <div className="font-semibold text-rose-200">Unable to submit inquiry</div>
+                          <div className="mt-0.5">{submitError}</div>
+                        </div>
+                      </div>
+                    )}
+
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-brand-cyan hover:bg-sky-300 active:bg-sky-400 text-slate-950 font-semibold text-xs uppercase tracking-wider rounded-lg shadow-glow-cyan transition-all"
+                        disabled={isSubmitting}
+                        className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-brand-cyan hover:bg-sky-300 active:bg-sky-400 disabled:opacity-60 disabled:cursor-not-allowed text-slate-950 font-semibold text-xs uppercase tracking-wider rounded-lg shadow-glow-cyan transition-all"
                       >
-                        <span>
-                          {formData.contactMethod === 'WhatsApp'
-                            ? 'Continue on WhatsApp'
-                            : 'Submit Requirement to Techzyan'}
-                        </span>
-                        <ArrowRight className="w-4 h-4" />
+                        {isSubmitting ? (
+                          <>
+                            <Loader2 className="w-4 h-4 animate-spin" />
+                            <span>Sending Requirement...</span>
+                          </>
+                        ) : (
+                          <>
+                            <span>
+                              {formData.contactMethod === 'WhatsApp'
+                                ? 'Continue on WhatsApp'
+                                : 'Submit Requirement to Techzyan'}
+                            </span>
+                            <ArrowRight className="w-4 h-4" />
+                          </>
+                        )}
                       </button>
                     </div>
                   </form>
