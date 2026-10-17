@@ -30,8 +30,11 @@ export const siteConfig = {
     city: "Kolkata",
     state: "West Bengal",
     country: "India",
-    fullAddress: "Kolkata, West Bengal, India",
-    regionServed: ["Kolkata", "West Bengal", "India", "Global"],
+    postalCode: "700019",
+    fullAddress: "Ballygunge / South Kolkata, West Bengal 700019, India",
+    regionServed: ["Kolkata", "Howrah", "Salt Lake", "New Town", "West Bengal", "India", "Global"],
+    latitude: "22.5726",
+    longitude: "88.3639",
   },
 
   contact: {

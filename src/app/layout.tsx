@@ -1,32 +1,53 @@
-﻿import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import './globals.css';
 import { siteConfig } from '@/config/site';
+
+export const viewport: Viewport = {
+  themeColor: '#080C14',
+  colorScheme: 'dark',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: 'Techzyan — Specialist Technical Studio | Kolkata & Global',
+    default: 'Techzyan — Specialist Technical Studio | Website Development Kolkata',
     template: '%s | Techzyan',
   },
   description: siteConfig.description,
+  applicationName: 'Techzyan Technical Studio',
+  category: 'Technology & Web Engineering',
+  classification: 'Software, Web Development & IT Solutions',
   keywords: [
     'Techzyan',
+    'Techzyan Technical Studio',
     'website development Kolkata',
     'web design studio Kolkata',
-    'doctor website development',
-    'tutor website portal',
+    'best web development company in Kolkata',
+    'Next.js web developer Kolkata',
+    'doctor website development Kolkata',
+    'clinic appointment booking system',
+    'healthcare website designer India',
+    'tutor website portal Kolkata',
+    'coaching institute web design',
     'Durga Puja website Kolkata',
     'Durga Puja sponsorship platform',
-    'custom technical solutions small business',
-    'clinic appointment system Kolkata',
-    'high performance web engineering India',
+    'Sarbojanin Durga Puja digital platform',
+    'custom web engineering India',
+    'high performance web development',
+    'bespoke IT solutions small business Kolkata',
+    'Ballygunge web development studio',
+    'WhatsApp booking website developer',
   ],
-  authors: [{ name: 'Techzyan Technical Studio' }],
-  creator: 'Techzyan',
-  publisher: 'Techzyan',
+  authors: [{ name: 'Techzyan Technical Studio', url: siteConfig.url }],
+  creator: 'Techzyan Technical Studio',
+  publisher: 'Techzyan Technical Studio',
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -40,25 +61,34 @@ export const metadata: Metadata = {
     locale: 'en_IN',
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: 'Techzyan — Specialist Technical Studio | Kolkata & Global',
+    title: 'Techzyan — Specialist Technical Studio | Website Development Kolkata',
     description: siteConfig.description,
     images: [
       {
         url: siteConfig.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Techzyan — Specialist Technical Studio',
+        alt: 'Techzyan — Specialist Technical Studio Kolkata',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Techzyan — Specialist Technical Studio',
+    title: 'Techzyan — Specialist Technical Studio | Kolkata',
     description: siteConfig.description,
     images: [siteConfig.ogImage],
+    creator: '@techzyan',
+    site: '@techzyan',
   },
   alternates: {
     canonical: siteConfig.url,
+  },
+  other: {
+    'geo.region': 'IN-WB',
+    'geo.placename': 'Kolkata',
+    'geo.position': `${siteConfig.location.latitude};${siteConfig.location.longitude}`,
+    'ICBM': `${siteConfig.location.latitude}, ${siteConfig.location.longitude}`,
+    'format-detection': 'telephone=no',
   },
 };
 
@@ -72,57 +102,150 @@ export default function RootLayout({
     '@graph': [
       {
         '@type': 'Organization',
-        '@id': 'https://techzyan.org/#organization',
+        '@id': `${siteConfig.url}/#organization`,
         name: siteConfig.name,
         legalName: siteConfig.legalName,
+        alternateName: 'Techzyan Studio',
         url: siteConfig.url,
-        logo: 'https://techzyan.org/logo.png',
+        logo: `${siteConfig.url}/icon.svg`,
+        image: siteConfig.ogImage,
         description: siteConfig.description,
+        telephone: siteConfig.contact.phoneRaw,
+        email: siteConfig.contact.email,
+        foundingDate: '2024',
         address: {
           '@type': 'PostalAddress',
+          streetAddress: 'Ballygunge / South Kolkata',
           addressLocality: siteConfig.location.city,
           addressRegion: siteConfig.location.state,
-          addressCountry: siteConfig.location.country,
+          postalCode: siteConfig.location.postalCode,
+          addressCountry: 'IN',
         },
-        contactPoint: {
-          '@type': 'ContactPoint',
-          contactType: 'technical inquiries',
-          email: siteConfig.contact.email,
-        },
+        contactPoint: [
+          {
+            '@type': 'ContactPoint',
+            telephone: siteConfig.contact.phoneRaw,
+            contactType: 'customer support',
+            areaServed: ['IN', 'Global'],
+            availableLanguage: ['English', 'Bengali', 'Hindi'],
+          },
+          {
+            '@type': 'ContactPoint',
+            email: siteConfig.contact.email,
+            contactType: 'technical inquiries',
+            areaServed: ['IN', 'Global'],
+            availableLanguage: ['English', 'Bengali', 'Hindi'],
+          },
+        ],
+        sameAs: [
+          siteConfig.socials.linkedin,
+          siteConfig.socials.github,
+          siteConfig.socials.twitter,
+        ],
+        knowsAbout: [
+          'Website Development',
+          'Next.js',
+          'React',
+          'TypeScript',
+          'Healthcare Clinic Portals',
+          'Tutor and Academic Platforms',
+          'Durga Puja Digital Infrastructure',
+          'High Performance Web Engineering',
+        ],
       },
       {
-        '@type': 'ProfessionalService',
-        '@id': 'https://techzyan.org/#service',
+        '@type': ['ProfessionalService', 'LocalBusiness'],
+        '@id': `${siteConfig.url}/#service`,
         name: 'Techzyan Technical Studio',
         url: siteConfig.url,
-        priceRange: '$$',
+        image: siteConfig.ogImage,
+        telephone: siteConfig.contact.phoneRaw,
+        email: siteConfig.contact.email,
+        priceRange: '₹₹',
         address: {
           '@type': 'PostalAddress',
-          addressLocality: 'Kolkata',
-          addressRegion: 'West Bengal',
-          addressCountry: 'India',
+          streetAddress: 'Ballygunge / South Kolkata',
+          addressLocality: siteConfig.location.city,
+          addressRegion: siteConfig.location.state,
+          postalCode: siteConfig.location.postalCode,
+          addressCountry: 'IN',
         },
+        geo: {
+          '@type': 'GeoCoordinates',
+          latitude: siteConfig.location.latitude,
+          longitude: siteConfig.location.longitude,
+        },
+        openingHoursSpecification: [
+          {
+            '@type': 'OpeningHoursSpecification',
+            dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+            opens: '10:00',
+            closes: '19:00',
+          },
+        ],
         areaServed: [
           { '@type': 'City', name: 'Kolkata' },
+          { '@type': 'City', name: 'Howrah' },
+          { '@type': 'City', name: 'Salt Lake' },
+          { '@type': 'City', name: 'New Town' },
           { '@type': 'AdministrativeArea', name: 'West Bengal' },
           { '@type': 'Country', name: 'India' },
         ],
-        description: 'Bespoke web development, clinical appointment systems, educational platforms, and Durga Puja digital hubs.',
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'Techzyan Technical Engineering Services',
+          itemListElement: [
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Business Website Engineering',
+                description: 'Custom high-performance websites engineered with Next.js, sub-second LCP, and conversion-focused design in Kolkata.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Doctor & Clinic Appointment Platforms',
+                description: 'Specialist clinical portals featuring symptom-aware appointment triage, OPD chamber timings, and direct WhatsApp routing.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Private Tutor & Academy Portals',
+                description: 'Academic platforms with curriculum roadmaps for ICSE, ISC, CBSE, small batch vacancy matrices, and parent feedback loops.',
+              },
+            },
+            {
+              '@type': 'Offer',
+              itemOffered: {
+                '@type': 'Service',
+                name: 'Durga Puja Digital Infrastructure & Sponsorship Platforms',
+                description: 'Official festival websites for Sarbojanin committees with sponsorship tier decks, transit maps, and interactive virtual dhaak.',
+              },
+            },
+          ],
+        },
       },
       {
         '@type': 'WebSite',
-        '@id': 'https://techzyan.org/#website',
+        '@id': `${siteConfig.url}/#website`,
         url: siteConfig.url,
         name: siteConfig.name,
+        description: siteConfig.description,
         publisher: {
-          '@id': 'https://techzyan.org/#organization',
+          '@id': `${siteConfig.url}/#organization`,
         },
+        inLanguage: 'en-IN',
       },
     ],
   };
 
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark scroll-smooth">
       <head>
         <script
           type="application/ld+json"

@@ -21,7 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/solutions/durga-puja`,
       lastModified,
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 0.95,
     },
     {
@@ -34,19 +34,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/work`,
       lastModified,
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/about`,
       lastModified,
       changeFrequency: 'monthly',
-      priority: 0.7,
+      priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
       lastModified,
-      changeFrequency: 'monthly',
-      priority: 0.85,
+      changeFrequency: 'weekly',
+      priority: 0.9,
     },
   ];
 }
