@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     'software engineering studio West Bengal',
     'Next.js web specialists India',
     'bespoke IT solutions Kolkata',
-    'Ballygunge Kolkata web studio',
+    'Baguiati Kolkata web studio',
+    'Python FastAPI development studio',
   ],
   alternates: {
     canonical: `${siteConfig.url}/about`,
@@ -73,6 +74,11 @@ export default function AboutPage() {
       knowsAbout: [
         'Web Development',
         'Next.js',
+        'React',
+        'TypeScript',
+        'Python',
+        'FastAPI',
+        'PostgreSQL',
         'Healthcare Applications',
         'Tutor Portals',
         'Durga Puja Platforms',

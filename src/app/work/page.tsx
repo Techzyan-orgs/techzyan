@@ -75,7 +75,9 @@ export default function WorkPage() {
           image: project.thumbnailImage.startsWith('http')
             ? project.thumbnailImage
             : `${siteConfig.url}${project.thumbnailImage}`,
-          url: project.demoUrl,
+          url: project.hasLiveSite && project.demoUrl.startsWith('http')
+            ? project.demoUrl
+            : `${siteConfig.url}/work#${project.id}`,
           author: {
             '@id': `${siteConfig.url}/#organization`,
           },

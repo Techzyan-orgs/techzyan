@@ -7,7 +7,7 @@ export const solutionsData: SolutionItem[] = [
     title: 'High-Performance Business Websites',
     subtitle: 'Fast, credible, and built to turn visitors into real client conversations.',
     description: 'We design and craft websites with clean typography, purposeful whitespace, and crystal-clear value propositions that build immediate authority for your business.',
-    audience: ['Local Businesses', 'Specialist Consultants', 'Retail Stores', 'Creative Agencies', 'Service Providers'],
+    audience: ['Growing Businesses', 'Creator Brands', 'Specialist Consultants', 'Retail Stores', 'Creative Agencies', 'Service Providers'],
     deliverables: ['Custom Web Design', 'Responsive Mobile Layout', 'Google Search & Local SEO Setup', 'Domain & Cloud Launch', '100% Code Ownership'],
     keyFeatures: [
       'Sub-second page loading on mobile networks',

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     'Durga Puja website Kolkata',
     'Durga Puja sponsorship platform',
     'Next.js web agency Kolkata',
-    'Ballygunge technical studio',
+    'Baguiati technical studio',
     'high performance web development India',
   ],
   alternates: {

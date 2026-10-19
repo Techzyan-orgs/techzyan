@@ -48,7 +48,7 @@ export const homeFaqs: FAQItem[] = [
   {
     question: 'Where is Techzyan based, and can we meet in person in Kolkata?',
     answer:
-      'Techzyan is based in Kolkata, West Bengal (serving Ballygunge, Deshapriya Park, Salt Lake, New Town, and all Kolkata regions, as well as global clients). We are happy to coordinate in-person strategy consultations in Kolkata or connect over video calls.',
+      'Techzyan is based in Baguiati, Kolkata, West Bengal (serving Salt Lake, New Town, Rajarhat, South & Central Kolkata, and all Kolkata regions, as well as global clients). We are happy to coordinate in-person strategy consultations in Kolkata or connect over video calls.',
   },
 ];
 
@@ -84,7 +84,7 @@ export const durgaPujaFaqs: FAQItem[] = [
   {
     question: 'Why does a Sarbojanin Durga Puja committee in Kolkata need an official digital platform?',
     answer:
-      'An official festival website establishes digital prestige, offers corporate sponsors a high-visibility branded asset, provides 150,000+ festival visitors with real-time transit guides and anjali schedules, and preserves the pandal theme art archive permanently on the web.',
+      'An official festival website establishes digital prestige, makes your committee effortlessly discoverable to brand marketers and corporate sponsors searching for high-impact cultural partnerships, and provides them with a complete, transparent showcase of your pandal theme, footfall metrics, and sponsorship deliverables. Simultaneously, it serves 150,000+ festival visitors with real-time transit guides and anjali schedules while preserving your artistic legacy permanently on the web.',
   },
   {
     question: 'How does the digital sponsorship deck help attract corporate sponsors?',
@@ -127,7 +127,7 @@ export const whoWeHelpFaqs: FAQItem[] = [
   {
     question: 'We are a boutique, salon, or custom tailoring business. How does custom web engineering help us?',
     answer:
-      'For bespoke businesses, imagery and styling confidence are everything. We design sensory editorial lookbooks, illustrated measurement guides, and private fitting schedulers that attract high-ticket clients across Kolkata.',
+      'For bespoke businesses, imagery and styling confidence are everything. We design sensory editorial lookbooks, illustrated measurement guides, and private fitting schedulers that attract high-ticket clients across Kolkata. Crucially, our localized SEO architecture and structured business schema help you achieve significantly better search results on Google and Google Maps, ensuring clients searching for premier local styling and custom tailoring discover your studio first.',
   },
   {
     question: 'Can educational academies and coaching institutes manage multiple subjects and teachers?',
@@ -163,7 +163,7 @@ export const aboutFaqs: FAQItem[] = [
   {
     question: 'What technology stack does Techzyan use?',
     answer:
-      'We specialize in modern, high-performance web engineering using Next.js 14, React 18, TypeScript, Tailwind CSS, and edge deployment platforms like Vercel and Cloudflare.',
+      'We specialize in modern, high-performance full-stack engineering without relying on bloated templates. Our frontend architecture is built on Next.js, React, TypeScript, and Tailwind CSS. For advanced backend systems, intelligent APIs, and high-throughput data processing, we engineer with Python, FastAPI, and Node.js, backed by robust relational databases like PostgreSQL. Deployments are managed on high-availability edge and cloud networks including Vercel and Cloudflare for sub-second performance.',
   },
   {
     question: 'Does Techzyan outsource client projects to third parties?',

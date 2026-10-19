@@ -30,11 +30,11 @@ export const siteConfig = {
     city: "Kolkata",
     state: "West Bengal",
     country: "India",
-    postalCode: "700019",
-    fullAddress: "Ballygunge / South Kolkata, West Bengal 700019, India",
+    postalCode: "700059",
+    fullAddress: "Baguiati, Kolkata, West Bengal 700059, India",
     regionServed: ["Kolkata", "Howrah", "Salt Lake", "New Town", "West Bengal", "India", "Global"],
-    latitude: "22.5726",
-    longitude: "88.3639",
+    latitude: "22.6225",
+    longitude: "88.4289",
   },
 
   contact: {
@@ -391,6 +391,42 @@ export const siteConfig = {
           'Theme Anubhuti Art Philosophy Showcase',
           'Corporate Sponsorship Deck & Tiers',
           'Baruipur Station & Pandal Route Map'
+        ]
+      }
+    },
+    {
+      id: 'sms-buddy',
+      title: 'SMS Buddy — Puja Donation & Receipt Dispatch App',
+      shortTitle: 'Native Android Donation & SMS Receipt App',
+      category: 'Cultural & Community Organizations',
+      clientType: 'Housing Society / Durga Puja Committee',
+      badge: 'Live Application',
+      demoUrl: '#details',
+      hasLiveSite: false,
+      thumbnailImage: '/images/sms-buddy-banner.jpg',
+      summary: 'A native Android application engineered for Swaranika Abasan Puja Committee to digitize festival donation collections, eliminate paper receipt books, and dispatch automated SMS receipts with food tokens directly to residents.',
+      problemSolved: 'Swaranika Abasan Puja Committee previously relied on manual paper receipt books to collect Durga Puja subscriptions across hundreds of housing society flats. This led to high printing costs, slow manual record-keeping, misplaced food token slips, and lack of real-time collection data.',
+      engineeredSolution: 'Engineered a purpose-built native Android application utilizing Android SmsManager multipart messaging, instant input validation, payment mode tagging (Cash, Online, Bank Transfer), automated sequential bill numbering, and digital lunch coupon allocations—dispatching immediate SMS receipts directly to residents with zero recurring third-party SMS gateway costs.',
+      keyFeatures: [
+        'Automated Multipart SMS Receipt Generation via Native Android SmsManager',
+        'Structured Resident Profile (Salutation, Name, Flat Number, 10-Digit Mobile Number)',
+        'Payment Mode Tracking (Cash, Online UPI, Bank Transfer) with Sequential Bill Numbers',
+        'Direct Food & Bhog Token Allocation embedded into resident SMS confirmations',
+        'Real-time Input Validation & SMS Preview Confirmation Dialog before dispatch',
+        'BroadcastReceiver Callbacks for Sent and Delivered SMS Delivery Tracking'
+      ],
+      mockData: {
+        heroHeadline: 'Digitizing Puja Subscription Collections with Instant SMS Receipts',
+        heroSubheadline: 'Engineered for Swaranika Abasan Puja Committee (Swaranika Cooperative Housing Society Ltd).',
+        metrics: [
+          { label: 'Paper Slips Used', value: 'Zero (100% Digital)' },
+          { label: 'SMS Dispatch Speed', value: '< 3 Seconds' },
+          { label: 'Cost Reduction', value: 'Substantial Savings' }
+        ],
+        uiHighlights: [
+          'Material3 Outlined Form with Error Validations',
+          'Integrated Bhog & Lunch Coupon Tracking',
+          'BroadcastReceiver Sent/Delivered Status Tracking'
         ]
       }
     }

@@ -1,4 +1,4 @@
-﻿import { DurgaPujaFeature, SponsorTier } from '@/types';
+import { DurgaPujaFeature, SponsorTier } from '@/types';
 
 export const durgaPujaFeatures: DurgaPujaFeature[] = [
   {
@@ -109,8 +109,8 @@ export const sampleSponsorTiers: SponsorTier[] = [
   },
   {
     name: 'Associate & Food Zone Sponsor',
-    tagline: 'Targeted placement for dining, local retailers & youth brands',
-    recommendedFor: 'Restaurants, Food Stalls, Fashion Outlets & Local Businesses',
+    tagline: 'Targeted placement for dining, growing retailers & creator brands',
+    recommendedFor: 'Restaurants, Food Stalls, Fashion Outlets, Growing Businesses & Creator Brands',
     digitalPerks: [
       'Listed under official Puja Food & Beverage directory with map pinpoint',
       'Logo on the official Sponsor Partners wall',

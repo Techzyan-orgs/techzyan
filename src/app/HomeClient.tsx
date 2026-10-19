@@ -10,6 +10,7 @@ import PujaConsultationModal from '@/components/PujaConsultationModal';
 import DemonstrationModal from '@/components/DemonstrationModal';
 import DhaakButton from '@/components/DhaakButton';
 import FAQSection from '@/components/FAQSection';
+import TestimonialSection from '@/components/TestimonialSection';
 import { homeFaqs } from '@/data/seoData';
 import { demonstrationProjects } from '@/data/demonstrations';
 import { siteConfig } from '@/config/site';
@@ -27,6 +28,7 @@ import {
   CalendarCheck,
   ExternalLink,
   Eye,
+  Smartphone,
 } from 'lucide-react';
 import WhatsAppIcon from '@/components/WhatsAppIcon';
 
@@ -66,13 +68,13 @@ export default function HomePage() {
       category: 'Private Tutor & Educator'
     },
     business: {
-      role: 'Growing Businesses',
+      role: 'Growing Businesses & Creator Brands',
       entry: 'Editorial Showcase & Brand Presence',
       entryDesc: 'Sub-second mobile speed with high-resolution lookbooks that build immediate credibility.',
       custom: 'Custom Price Estimator & Measurement Guide',
       customDesc: 'Pre-qualify customer inquiries and collect bespoke orders without manual friction.',
       impact: 'Turn passive web visitors into high-intent paying customers.',
-      category: 'Growing Business'
+      category: 'Growing Business & Creator Brand'
     },
     puja: {
       role: 'Durga Puja & Cultural Committees',
@@ -111,7 +113,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed text-balance font-normal">
-                We craft high-speed websites and intelligent operational tools for doctors, educators, local businesses, and Durga Puja committees in Kolkata and beyond.
+                We craft high-speed websites and intelligent operational tools for doctors, educators, growing businesses, creator brands, and Durga Puja committees in Kolkata and beyond.
               </p>
 
               <div className="py-1 text-xs font-mono uppercase tracking-widest text-slate-400 font-medium">
@@ -325,7 +327,7 @@ export default function HomePage() {
               {[
                 { id: 'doctor', label: 'Doctor / Clinic', icon: Stethoscope },
                 { id: 'tutor', label: 'Private Tutor', icon: GraduationCap },
-                { id: 'business', label: 'Growing Business', icon: Briefcase },
+                { id: 'business', label: 'Growing Business / Creator Brand', icon: Briefcase },
                 { id: 'puja', label: 'Durga Puja Committee', icon: Flame },
               ].map((tab) => {
                 const Icon = tab.icon;
@@ -511,7 +513,7 @@ export default function HomePage() {
                   Proof of Capability Through Real Prototypes
                 </h2>
                 <p className="mt-2 text-slate-400 text-sm sm:text-base leading-relaxed">
-                  We don't invent fake client logos or made-up reviews. Explore these fully functional, realistic demonstration concepts.
+                  Explore these fully functional, realistic demonstration concepts alongside verified operational impact delivered for our clients in Kolkata.
                 </p>
               </div>
 
@@ -531,35 +533,80 @@ export default function HomePage() {
                   className="glass-card rounded-3xl overflow-hidden border border-slate-800 hover:border-brand-cyan/40 transition-all flex flex-col justify-between group"
                 >
                   {/* Thumbnail Image */}
-                  <div className="relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800/80">
-                    <Image
-                      src={project.thumbnailImage}
-                      alt={project.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                      sizes="(max-width: 768px) 100vw, 400px"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
-                    <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-                      <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-slate-900/90 text-slate-200 border border-slate-700/80 backdrop-blur-sm">
-                        {project.clientType}
-                      </span>
-                      <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-sky-500/20 text-brand-cyan border border-sky-500/40 backdrop-blur-sm font-semibold">
-                        {project.badge}
-                      </span>
-                    </div>
-                  </div>
+                  {project.hasLiveSite ? (
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800/80 cursor-pointer"
+                    >
+                      <Image
+                        src={project.thumbnailImage}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, 400px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                      <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-slate-900/90 text-slate-200 border border-slate-700/80 backdrop-blur-sm">
+                          {project.clientType}
+                        </span>
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-sky-500/20 text-brand-cyan border border-sky-500/40 backdrop-blur-sm font-semibold">
+                          {project.badge}
+                        </span>
+                      </div>
+                    </a>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setSelectedDemonstration(project)}
+                      className="w-full text-left block relative w-full h-44 bg-slate-950 overflow-hidden border-b border-slate-800/80 cursor-pointer group/thumb"
+                    >
+                      <Image
+                        src={project.thumbnailImage}
+                        alt={project.title}
+                        fill
+                        className="object-cover group-hover/thumb:scale-105 transition-transform duration-500"
+                        sizes="(max-width: 768px) 100vw, 400px"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent" />
+                      <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-mono uppercase tracking-wider bg-slate-900/90 text-slate-200 border border-slate-700/80 backdrop-blur-sm">
+                          {project.clientType}
+                        </span>
+                        <span className="px-2 py-0.5 rounded-full text-[10px] font-mono bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 backdrop-blur-sm font-semibold">
+                          {project.badge}
+                        </span>
+                      </div>
+                    </button>
+                  )}
 
                   <div className="p-6 sm:p-7 space-y-4 flex-1 flex flex-col justify-between">
                     <div className="space-y-3">
-                      <h3 className="text-lg font-bold text-slate-100 group-hover:text-brand-cyan transition-colors">
-                        {project.title}
+                      <h3 className="text-lg font-bold">
+                        {project.hasLiveSite ? (
+                          <a
+                            href={project.demoUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-slate-100 group-hover:text-brand-cyan transition-colors block"
+                          >
+                            {project.title}
+                          </a>
+                        ) : (
+                          <button
+                            type="button"
+                            onClick={() => setSelectedDemonstration(project)}
+                            className="text-left text-slate-100 group-hover:text-emerald-400 transition-colors block w-full"
+                          >
+                            {project.title}
+                          </button>
+                        )}
                       </h3>
                       <p className="text-xs text-slate-400 leading-relaxed">
                         {project.summary}
                       </p>
-
-
                     </div>
 
                     <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-2">
@@ -571,15 +618,26 @@ export default function HomePage() {
                         <span>Inspect Details</span>
                       </button>
 
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-brand-cyan text-xs font-bold transition-colors border border-sky-500/30"
-                      >
-                        <span>Visit Website</span>
-                        <ExternalLink className="w-3.5 h-3.5" />
-                      </a>
+                      {project.hasLiveSite ? (
+                        <a
+                          href={project.demoUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-sky-500/10 hover:bg-sky-500/20 text-brand-cyan text-xs font-bold transition-colors border border-sky-500/30"
+                        >
+                          <span>Visit Website</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                        </a>
+                      ) : (
+                        <button
+                          type="button"
+                          onClick={() => setSelectedDemonstration(project)}
+                          className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 text-xs font-bold transition-colors border border-emerald-500/30"
+                        >
+                          <Smartphone className="w-3.5 h-3.5" />
+                          <span>View App Details</span>
+                        </button>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -587,6 +645,15 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* 5.5. CLIENT TESTIMONIAL & OPERATIONAL IMPACT */}
+        <TestimonialSection
+          id="client-endorsement"
+          theme="cyan"
+          badge="Verified Client Endorsement"
+          title="Real-World Impact & Client Appreciation"
+          subtitle="We build practical, high-impact digital systems. Read how our custom application transformed operations and reduced costs for Swaranika Abasan Puja Committee."
+        />
 
         {/* 6. HOW WE WORK */}
         <section className="py-16 lg:py-24 bg-slate-950 border-b border-slate-800">

@@ -18,6 +18,9 @@ import {
   Compass,
   HeartHandshake,
   Cpu,
+  Database,
+  Server,
+  Globe,
 } from 'lucide-react';
 
 export default function AboutPage() {
@@ -94,6 +97,110 @@ export default function AboutPage() {
               <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                 Rooted in Kolkata’s rich intellectual and cultural fabric, we bring world-class digital design and engineering rigor to local enterprises, doctors, educators, and Bengal’s magnificent Durga Puja committees.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Core Technology Stack & Engineering Architecture */}
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
+          <div className="p-8 sm:p-12 rounded-3xl bg-slate-900/60 border border-slate-800 space-y-8">
+            <div className="max-w-3xl space-y-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-brand-cyan text-xs font-mono">
+                <Cpu className="w-3.5 h-3.5" />
+                <span>Our Technology Stack</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-display font-extrabold text-slate-100 tracking-tight">
+                Modern, Fast &amp; Proven Technologies
+              </h2>
+              <p className="text-slate-300 text-sm sm:text-base leading-relaxed">
+                We reject slow templates and version lock-in. Our software is engineered using modern, high-throughput programming languages, resilient microservices, and edge-native cloud platforms.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Frontend */}
+              <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800/80 space-y-3 hover:border-brand-cyan/40 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-sky-500/10 border border-sky-500/30 flex items-center justify-center text-brand-cyan mb-2">
+                  <Code2 className="w-4 h-4" />
+                </div>
+                <div className="text-xs font-mono uppercase tracking-wider text-brand-cyan font-semibold">
+                  Frontend &amp; Interface
+                </div>
+                <div className="text-base font-bold text-slate-100">Next.js &amp; React</div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Sub-second page paints, server-side rendering, TypeScript type safety, and clean Tailwind CSS design.
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/60">
+                  {['Next.js', 'React', 'TypeScript', 'Tailwind CSS'].map(tag => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-slate-800/80 text-[11px] font-mono text-slate-300 border border-slate-700/60">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Advanced Backend & APIs */}
+              <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800/80 space-y-3 hover:border-emerald-500/40 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-2">
+                  <Server className="w-4 h-4" />
+                </div>
+                <div className="text-xs font-mono uppercase tracking-wider text-emerald-400 font-semibold">
+                  Backend &amp; High-Speed APIs
+                </div>
+                <div className="text-base font-bold text-slate-100">Python &amp; FastAPI</div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Asynchronous high-throughput microservices, background job workers, intelligent data processing, and Node.js.
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/60">
+                  {['Python', 'FastAPI', 'Node.js', 'Async APIs'].map(tag => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-emerald-500/10 text-[11px] font-mono text-emerald-300 border border-emerald-500/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Data & Storage */}
+              <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800/80 space-y-3 hover:border-indigo-500/40 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-2">
+                  <Database className="w-4 h-4" />
+                </div>
+                <div className="text-xs font-mono uppercase tracking-wider text-indigo-400 font-semibold">
+                  Data &amp; Persistence
+                </div>
+                <div className="text-base font-bold text-slate-100">PostgreSQL &amp; Redis</div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  ACID-compliant relational schemas, lightning-fast in-memory caching, and structured cloud storage.
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/60">
+                  {['PostgreSQL', 'Redis', 'REST & SQL', 'Prisma'].map(tag => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-indigo-500/10 text-[11px] font-mono text-indigo-300 border border-indigo-500/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Edge & Cloud Infrastructure */}
+              <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800/80 space-y-3 hover:border-amber-500/40 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-2">
+                  <Globe className="w-4 h-4" />
+                </div>
+                <div className="text-xs font-mono uppercase tracking-wider text-amber-400 font-semibold">
+                  Cloud &amp; Edge Delivery
+                </div>
+                <div className="text-base font-bold text-slate-100">Vercel &amp; Cloudflare</div>
+                <p className="text-xs text-slate-400 leading-relaxed">
+                  Worldwide edge network CDN, automated SSL certificates, enterprise DDoS shielding, and Docker containers.
+                </p>
+                <div className="flex flex-wrap gap-1.5 pt-2 border-t border-slate-800/60">
+                  {['Vercel', 'Cloudflare', 'AWS', 'Docker'].map(tag => (
+                    <span key={tag} className="px-2 py-0.5 rounded bg-amber-500/10 text-[11px] font-mono text-amber-300 border border-amber-500/20">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </section>

@@ -179,7 +179,7 @@ export default function ConsultationModal({ isOpen, onClose, initialCategory }: 
                   >
                     <option value="Doctor & Healthcare">Doctor & Healthcare</option>
                     <option value="Private Tutor & Educator">Private Tutor & Educator</option>
-                    <option value="Growing Business">Growing Business</option>
+                    <option value="Growing Businesses & Creator Brands">Growing Businesses & Creator Brands</option>
                     <option value="Educational Institute">Educational Institute</option>
                     <option value="Durga Puja Committee">Durga Puja Committee</option>
                     <option value="Other Specialist">Other Specialist</option>

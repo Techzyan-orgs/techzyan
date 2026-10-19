@@ -10,6 +10,7 @@ import DhaakButton from '@/components/DhaakButton';
 import { durgaPujaFeatures, sampleSponsorTiers } from '@/data/durgaPuja';
 import { siteConfig } from '@/config/site';
 import FAQSection from '@/components/FAQSection';
+import TestimonialSection from '@/components/TestimonialSection';
 import { durgaPujaFaqs } from '@/data/seoData';
 import {
   Flame,
@@ -104,14 +105,14 @@ export default function DurgaPujaPage() {
           <div className="rounded-3xl border border-amber-500/30 shadow-2xl overflow-hidden relative">
             <div className="absolute inset-0 z-0">
               <Image
-                src="https://images.unsplash.com/photo-1601058268499-e52658b8bb88?auto=format&fit=crop&w=1600&q=85"
-                alt="Durga Puja Festival Illumination and Idols"
+                src="/images/durga-idol-side-profile.jpg"
+                alt="Durga Idol Side Face Profile in Golden Lighting"
                 fill
-                className="object-cover object-center opacity-35"
+                className="object-cover object-right sm:object-[80%_center] opacity-65"
                 sizes="(max-width: 1200px) 100vw, 1200px"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-[#140E06]/95 via-[#1A1208]/90 to-[#0A0704]/98" />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#0C0804] via-[#120B05]/95 via-45% to-[#0A0704]/30" />
             </div>
 
             <div className="max-w-3xl space-y-6 relative z-10 p-8 sm:p-12 lg:p-14">
@@ -306,6 +307,15 @@ export default function DurgaPujaPage() {
             ))}
           </div>
         </section>
+
+        {/* Client Testimonial / Endorsement */}
+        <TestimonialSection
+          id="puja-testimonial"
+          theme="amber"
+          badge="Verified Committee Endorsement"
+          title="Proven Impact for Kolkata Puja Celebrations"
+          subtitle="How our customized digital architecture helped Swaranika Abasan Puja Committee digitize collections, cut costs, and streamline operations."
+        />
 
         {/* SEO FAQ SECTION */}
         <FAQSection

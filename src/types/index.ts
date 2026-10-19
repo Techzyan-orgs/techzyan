@@ -64,3 +64,15 @@ export interface SponsorTier {
   digitalPerks: string[];
   featuredPlacement: boolean;
 }
+
+export interface TestimonialItem {
+  id: string;
+  salutation: string;
+  paragraphs: string[];
+  clientName: string;
+  designation: string;
+  committee: string;
+  organization: string;
+  projectScope: string;
+  badge: string;
+}

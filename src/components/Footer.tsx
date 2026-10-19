@@ -37,7 +37,7 @@ export default function Footer() {
               <span className="w-2 h-2 rounded-full bg-brand-cyan" />
             </Link>
             <p className="text-slate-400 leading-relaxed text-sm max-w-sm">
-              A premium technical studio based in Kolkata. We partner with businesses, doctors, educators, and cultural committees to engineer thoughtful websites and right-sized digital solutions.
+              A premium technical studio based in Kolkata. We partner with growing businesses, creator brands, doctors, educators, and cultural committees to engineer thoughtful websites and right-sized digital solutions.
             </p>
             <div className="p-4 rounded-xl bg-slate-900/80 border border-slate-800 max-w-sm space-y-2">
               <div className="text-xs font-mono uppercase tracking-wider text-brand-cyan font-semibold flex items-center gap-1.5">

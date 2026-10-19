@@ -60,7 +60,7 @@ export default function WhoWeHelpPage() {
               <span className="text-gradient-cyan">practice or business actually works.</span>
             </h1>
             <p className="mt-4 text-slate-300 text-base sm:text-lg leading-relaxed">
-              We do not build generic one-size-fits-all websites. We deeply understand the real operational bottlenecks of doctors, tutors, boutique shops, institutes, and festival organizers.
+              We do not build generic one-size-fits-all websites. We deeply understand the real operational bottlenecks of doctors, tutors, growing businesses, creator brands, institutes, and festival organizers.
             </p>
           </div>
         </section>
@@ -182,7 +182,7 @@ export default function WhoWeHelpPage() {
         <FAQSection
           id="who-we-help-faq"
           badge="Specialized Guidance"
-          title="Questions From Doctors, Tutors & Growing Businesses"
+          title="Questions From Doctors, Tutors, Growing Businesses & Creator Brands"
           subtitle="How our customized digital platforms address the operational and client conversion needs of specific sectors in Kolkata."
           items={whoWeHelpFaqs}
         />

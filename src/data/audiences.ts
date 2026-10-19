@@ -43,20 +43,20 @@ export const audienceData: AudienceItem[] = [
   },
   {
     id: 'local-businesses',
-    title: 'Growing Businesses',
-    roleSubtitle: 'Heritage Shops, Custom Ateliers, Service Agencies & Retailers',
-    context: 'Local businesses provide exceptional craft, personal care, and specialized services, yet their online presence often fails to convey the quality of their work.',
+    title: 'Growing Businesses & Creator Brands',
+    roleSubtitle: 'Heritage Shops, Custom Ateliers, Creator Brands & Digital Retailers',
+    context: 'Growing businesses and creator brands provide exceptional craft, personal care, and specialized services, yet their online presence often fails to convey the quality of their work.',
     commonFriction: [
-      'Relying solely on social media pages with unpredictable reach',
-      'Inability to receive customized project or product inquiries efficiently',
+      'Relying solely on social media algorithms with unpredictable reach and no direct audience ownership',
+      'Inability to receive customized project, commission, or product inquiries efficiently',
       'Outdated or non-responsive websites built years ago by generic agencies'
     ],
-    techzyanApproach: 'We craft bespoke, visually confident websites that showcase your artisanal products or services, featuring clear quotation request flows and seamless mobile speed.',
-    entrySolution: 'High-conversion brand website with custom visual hierarchy.',
-    expansionSolution: 'Bespoke price estimation tool or custom client inquiry manager.',
+    techzyanApproach: 'We craft bespoke, visually confident websites and digital showcases that highlight your craft, personal brand, and services, featuring seamless quotation flows, editorial lookbooks, and instant mobile speed.',
+    entrySolution: 'High-conversion brand website or creator platform with custom visual hierarchy.',
+    expansionSolution: 'Bespoke price estimation tool, commission booking system, or client inquiry manager.',
     keyOutcomes: [
-      'Immediate credibility when prospective clients search for your business',
-      'Pre-qualified inquiries that understand your pricing and craftsmanship',
+      'Immediate authority and credibility when prospective clients and brand sponsors search for you',
+      'Pre-qualified inquiries that understand your pricing, audience, and craftsmanship',
       'A digital asset you own completely with zero monthly platform lock-ins'
     ],
     iconName: 'Briefcase'

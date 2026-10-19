@@ -5,15 +5,17 @@ import { whoWeHelpFaqs, generateBreadcrumbSchema } from '@/data/seoData';
 import { generateFaqSchema } from '@/components/FAQSection';
 
 export const metadata: Metadata = {
-  title: 'Websites for Doctors, Private Tutors & Businesses in Kolkata',
+  title: 'Websites for Doctors, Private Tutors, Growing Businesses & Creator Brands | Techzyan',
   description:
-    'Tailored web solutions for doctors, specialist clinics, private tutors, boutique retail, and Durga Puja committees across Kolkata. High-performance, mobile-first engineering.',
+    'Tailored web solutions for doctors, specialist clinics, private tutors, growing businesses, creator brands, and Durga Puja committees across Kolkata. High-performance, mobile-first engineering.',
   keywords: [
     'doctor website Kolkata',
     'clinic website development Kolkata',
     'private tutor website portal Kolkata',
     'academic mentor web design West Bengal',
-    'local business website design Kolkata',
+    'growing business website design Kolkata',
+    'creator brand website Kolkata',
+    'creator portfolio website development',
     'Durga Puja committee platform',
     'salon boutique website development',
     'healthcare IT solutions Kolkata',
