@@ -80,7 +80,7 @@ export default function TestimonialSection({
           </div>
 
           {/* Letter Body */}
-          <div className="py-6 sm:py-8 space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
+          <div className="pt-6 sm:pt-8 pb-4 space-y-4 text-sm sm:text-base text-slate-300 leading-relaxed">
             <p className={`font-semibold font-display text-base sm:text-lg ${isAmber ? 'text-amber-200' : 'text-slate-100'}`}>
               {testimonial.salutation}
             </p>
@@ -92,33 +92,8 @@ export default function TestimonialSection({
             ))}
           </div>
 
-          {/* Key Impact Metrics / Deliverables */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 py-4 border-y border-slate-800/80 my-2">
-            <div className="p-3.5 rounded-xl bg-black/40 border border-slate-800/60 flex items-start gap-2.5">
-              <Send className={`w-4 h-4 mt-0.5 shrink-0 ${isAmber ? 'text-amber-400' : 'text-brand-cyan'}`} />
-              <div>
-                <div className="text-xs font-bold text-slate-200">SMS Digital Receipts</div>
-                <div className="text-[11px] text-slate-400">Instant delivery to all housing society residents</div>
-              </div>
-            </div>
-            <div className="p-3.5 rounded-xl bg-black/40 border border-slate-800/60 flex items-start gap-2.5">
-              <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-emerald-400" />
-              <div>
-                <div className="text-xs font-bold text-slate-200">Considerable Cost Savings</div>
-                <div className="text-[11px] text-slate-400">Eliminated physical receipt printing overhead</div>
-              </div>
-            </div>
-            <div className="p-3.5 rounded-xl bg-black/40 border border-slate-800/60 flex items-start gap-2.5">
-              <Sparkles className={`w-4 h-4 mt-0.5 shrink-0 ${isAmber ? 'text-amber-400' : 'text-brand-cyan'}`} />
-              <div>
-                <div className="text-xs font-bold text-slate-200">Real-Time Data Analytics</div>
-                <div className="text-[11px] text-slate-400">Efficient collection tracking for faster decisions</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Signature Block */}
-          <div className="pt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          {/* Signature Block (Placed directly after letter body for uninterrupted continuity) */}
+          <div className="pt-2 pb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
             <div className="space-y-1">
               <div className="text-xs font-mono uppercase tracking-wider text-slate-400">Best regards,</div>
               <div className={`text-lg font-bold font-display ${isAmber ? 'text-amber-100' : 'text-slate-100'}`}>
@@ -141,6 +116,33 @@ export default function TestimonialSection({
             >
               <Quote className="w-3.5 h-3.5" />
               <span>Official Letter of Appreciation</span>
+            </div>
+          </div>
+
+          {/* Key Impact Metrics / Deliverables (Placed after BEST REGARDS to preserve mail continuity) */}
+          <div className="pt-6 border-t border-slate-800/80">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+              <div className="p-3.5 rounded-xl bg-black/40 border border-slate-800/60 flex items-start gap-2.5">
+                <Send className={`w-4 h-4 mt-0.5 shrink-0 ${isAmber ? 'text-amber-400' : 'text-brand-cyan'}`} />
+                <div>
+                  <div className="text-xs font-bold text-slate-200">SMS Digital Receipts</div>
+                  <div className="text-[11px] text-slate-400">Instant delivery to all housing society residents</div>
+                </div>
+              </div>
+              <div className="p-3.5 rounded-xl bg-black/40 border border-slate-800/60 flex items-start gap-2.5">
+                <CheckCircle2 className="w-4 h-4 mt-0.5 shrink-0 text-emerald-400" />
+                <div>
+                  <div className="text-xs font-bold text-slate-200">Considerable Cost Savings</div>
+                  <div className="text-[11px] text-slate-400">Eliminated physical receipt printing overhead</div>
+                </div>
+              </div>
+              <div className="p-3.5 rounded-xl bg-black/40 border border-slate-800/60 flex items-start gap-2.5">
+                <Sparkles className={`w-4 h-4 mt-0.5 shrink-0 ${isAmber ? 'text-amber-400' : 'text-brand-cyan'}`} />
+                <div>
+                  <div className="text-xs font-bold text-slate-200">Real-Time Data Analytics</div>
+                  <div className="text-[11px] text-slate-400">Efficient collection tracking for faster decisions</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
